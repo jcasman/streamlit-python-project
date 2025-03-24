@@ -7,9 +7,9 @@ password = st.text_input("Enter your password", type="password")
 
 # Validate credentials
 if username == st.secrets["valid_username"] and password == st.secrets["valid_password"]:
-    st.success("Login successful!")
+    st.success("Nice work, login successful!")
 else:
-    st.error("Invalid username or password")
+    st.error("Sorry, invalid username or password")
 
 st.title('This is my Hello World app!')
 
