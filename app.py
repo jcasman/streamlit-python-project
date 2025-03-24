@@ -1,6 +1,16 @@
 import streamlit as st
 import os
 
+# Ask the user for username and password
+username = st.text_input("Enter your username")
+password = st.text_input("Enter your password", type="password")
+
+# Validate credentials
+if username == st.secrets["valid_username"] and password == st.secrets["valid_password"]:
+    st.success("Login successful!")
+else:
+    st.error("Invalid username or password")
+    
 # Everything is accessible via the st.secrets dict:
 
 st.write("DB username:", st.secrets["db_username"])
