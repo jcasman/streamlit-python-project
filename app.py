@@ -10,22 +10,10 @@ if username == st.secrets["valid_username"] and password == st.secrets["valid_pa
     st.success("Login successful!")
 else:
     st.error("Invalid username or password")
-    
-# Everything is accessible via the st.secrets dict:
 
-st.write("DB username:", st.secrets["db_username"])
-st.write("DB password:", st.secrets["db_password"])
+st.title('This is my Hello World app!')
 
-# And the root-level secrets are also accessible as environment variables:
-
-st.write(
-    "Has environment variables been set:",
-    os.environ["db_username"] == st.secrets["db_username"],
-)
-
-st.title('This is my Hellow World app!')
-
-st.write('Hello World!')
+st.write('Helloooooo World!')
 
 st. header('This is a header with a divider below it')
 
